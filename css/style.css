@@ -1,0 +1,397 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 700;
+	color: #ffffff;
+
+	background-color: #87a092;
+
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover, 
+a:focus {
+	color: #e84d37;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.site-navigation a:active {
+	box-shadow: inset 0 2px 0 1px #696969;
+}
+
+.modal-catalog-list {
+	background-color: #ffffff;
+}
+
+.modal-catalog-item a {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.modal-catalog-item:first-child a{
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+}
+
+.modal-catalog-item a:hover,
+.modal-catalog-item a:focus {
+	background-color: #fbded7;
+}
+
+.modal-catalog-item a:active {
+	background-color: #f6b5a5;
+	box-shadow: none;
+}
+
+
+.user-navigation li>a {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-navigation li>a:hover,
+.user-navigation li>a:focus {
+	background-color: #ffffff;
+	color: #323232;
+}
+
+.user-navigation label {
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #999999;
+}
+
+.user-navigation .modal-search-form,
+.user-navigation .modal-login,
+.user-navigation .modal-cart {
+	background-color: #f8f7f4;
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.modal-login-form a {
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.modal-login-form a:hover, 
+.modal-login-form a:focus {
+	color: #e84d37;
+}
+
+.cart-items-list {
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.cart-items-list .total {
+	font-size: 15px;
+	line-height: 16px;
+	font-weight: 700;
+}
+
+.cart-items-list img {
+	border-radius: 50%;
+}
+
+.button {
+	font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  background-image: linear-gradient(90deg, #e74a35, #f26843);
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+	color: #ffffff;
+	background-image: linear-gradient(90deg, #e74a35, #f26843);
+	box-shadow: 0px 2px 0 2px #ac1000;
+}
+
+.button:active {
+	color: #ffffff;
+	background-image: linear-gradient(90deg, #f26843, #e74a35);
+	box-shadow: inset 0 2px 0 2px #942718;
+
+}
+
+.main-navigation ul {
+	list-style: none;
+}
+
+.site-navigation {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.user-navigation {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.open-hours {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.main-header > a {
+	font-size: 22px;
+	line-height: 24px;
+}
+
+.slider h2 {
+	font-size: 60px;
+	line-height: 60.35px;
+}
+
+.slider ul {
+	list-style: none;
+}
+
+.slider a {
+	font-size: 32px;
+	line-height: 44px;
+}
+
+.promotion h3 {
+	font-size: 35px;
+	line-height: 41px;
+}
+
+.promotion ul {
+	list-style: none;
+}
+
+.promotion-item p {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.promotion-item a {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.promotion-item:first-child {	
+	background-image: url("../img/raspberry-background.jpg");
+	/*background-color: #be3256;*/
+  background-repeat: no-repeat;
+}
+
+.promotion-item:nth-child(2) {
+	background-image: url("../img/chocolate-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.catalog ul {
+	list-style: none;
+}
+
+.catalog-item h3 {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 500;
+}
+
+.catalog-item img {
+	border-radius: 50%;
+}
+
+.catalog-item:hover,
+.catalog-item:active {
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);;
+}
+
+.features {
+	background-image: url("../img/waffle-background.jpg");
+}
+
+.features ul {
+	list-style: none;
+}
+
+.features p {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 500;
+	color: #323232;
+}
+
+.feature-item {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.blog-news h2 {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 500;
+	color: #323232;
+}
+
+.blog-news a {
+	font-size: 24px;
+	line-height: 30px;
+	color: #323232;
+	text-decoration: underline;
+}
+
+.subscription p {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #5a5a5a;
+}
+
+.contact-information p {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.contact-information b {
+	font-size: 18px;
+	line-height: 24px;
+	color: #323232;
+}
+
+.contact-information a {
+	/*font-size: 14px;
+	line-height: 20px;*/
+	color: #323232;
+}
+
+.contacts a {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.main-footer ul {
+	list-style: none;
+}
+
+.footer-info a {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+.footer-copyright {
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+.modal-feedback {
+	background-color: #f8f7f4;
+}
+
+.modal-feedback p {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 500;
+	color: #323232;
+}
+
+.modal-feedback-form label {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #999999;
+}
+
+.modal-feedback textarea {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #999999;
+}
+
+.filter ul {
+	list-style: none;
+}
+
+.breadcrumbs {
+	list-style: none;
+}
+
+.filter-form fieldset {
+	border: none;
+}
+
+.filter-form label {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+
+.filter-form legend,
+label[for="price-sorting-field"] {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.filter-form .filler-list,
+.filter-form .creamy-list,
+.filter-form .sorting-filter {
+	background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.filter-form .sorting-filter,
+.filter-form .sorting-filter-option {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	color: #ffffff;;
+}
+
+/*.filter-form .sorting-filter-option {
+	background-color: rgba(255, 255, 255, 0.2);
+}*/
+
+.catalog .pagination {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+	background-color: #ffffff;
+	color: #353535;
+}
