@@ -8,9 +8,9 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+  <input class="slider-toggle v1isually-hidden" type="radio" id="product-1" name="toggle" checked>
+  <input class="slider-toggle v1isually-hidden" type="radio" id="product-2" name="toggle">
+  <input class="slider-toggle v1isually-hidden" type="radio" id="product-3" name="toggle">
   <div class="site-wrapper">
     <header class="main-header">
       <div class="container">
@@ -21,47 +21,56 @@
 
           <ul class="site-navigation">
             <li>
-              <a href="#"><span class="underline-wrapper">Каталог</span></a>
-              <!-- <ul class="modal-catalog-list">
+              <a class="site-navigation-link" href="#"><span class="underline-wrapper">Каталог</span></a>
+              <ul class="modal modal-catalog-list">
                 <li class="modal-catalog-item"><a href="#">Новинки</a></li>
                 <li class="modal-catalog-item"><a href="catalog.html">Сливочное</a></li>
                 <li class="modal-catalog-item"><a href="#">Щербеты</a></li>
                 <li class="modal-catalog-item"><a href="#">Фруктовый лед</a></li>
                 <li class="modal-catalog-item"><a href="#">Мелорин</a></li>
-              </ul> -->
+              </ul>
             </li>
-            <li><a href="#"><span class="underline-wrapper">Доставка и оплата</span></a></li>
-            <li><a href="#"><span class="underline-wrapper">О компании</span></a></li>
+            <li><a class="site-navigation-link" href="#"><span class="underline-wrapper">Доставка и оплата</span></a></li>
+            <li><a class="site-navigation-link" href="#"><span class="underline-wrapper">О компании</span></a></li>
           </ul>
 
           <ul class="user-navigation">
             <li class="user-navigation-search">
-              <a class="search" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" fill="#fff"/></svg>
+              <a class="search user-navigation-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" fill="#fff"/></svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
-              <!-- <form class="modal-search-form" action="https://echo.htmlacademy.ru" method="post">
-                <label for="modal-search-field">Что ищем?</label>
-                <input class="text-input-field" type="search" name="modal-search" id="modal-search-field">
-              </form> -->
+              <form class="modal modal-search-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="text-input">
+                  <input class="text-input-field" type="search" name="modal-search" id="modal-search-field">
+                  <label class="text-input-label" for="modal-search-field">Что ищем?</label>                  
+                </p>
+              </form>
             </li>
             <li class="user-navigation-login">
-              <a class="user-navigation" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" fill="#fff"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" fill="#fff"/></svg>Вход</a>
+              <a class="user-navigation user-navigation-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" fill="#fff"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" fill="#fff"/></svg>Вход</a>
               <section class="modal modal-login">
                 <h2 class="visually-hidden">Пожалуйста, введите электронную почту и пароль или зарегистрируйтесь</h2>
-                <!-- <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <label for="login-email-field">Электронная почта</label>
-                  <input class="text-input-field" type="email" name="login-email" id="login-email-field">
-
-                  <label for="login-password-field">Пароль</label>
-                  <input class="text-input-field" type="password" name="login-password" id="login-password-field">
-                  <button class="button" type="submit">Войти</button>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
-                </form> -->
+                <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="text-input">
+                    <input class="text-input-field" type="email" name="login-email" id="login-email-field">
+                    <label class="text-input-label" for="login-email-field">Электронная почта</label>                    
+                  </p>
+                  <p class="text-input">
+                    <input class="text-input-field" type="password" name="login-password" id="login-password-field">
+                    <label class="text-input-label" for="login-password-field">Пароль</label>
+                  </p>
+                  <div class="modal-login-container">
+                    <button class="button" type="submit">Войти</button>
+                    <div class="link-wrapper">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
               </section>
             </li>
             <li class="user-navigation-cart">
-              <a class="cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" fill="#fff"/><circle cx="6.984" cy="18" r="2" fill="#fff"/><circle cx="15.984" cy="18" r="2" fill="#fff"/></svg>Пусто</a>
+              <a class="cart user-navigation-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" fill="#fff"/><circle cx="6.984" cy="18" r="2" fill="#fff"/><circle cx="15.984" cy="18" r="2" fill="#fff"/></svg>Пусто</a>
             </li>
           </ul>
         </nav>
@@ -115,7 +124,7 @@
           </ul>
         </section>
 
-        <section class="catalog">
+        <section class="catalog hit-catalog">
           <h2 class="visually-hidden">Каталог</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
@@ -165,14 +174,10 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
           <ul class="features-list">
-            <div class="column-wrapper">
               <li class="feature-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-              <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
-            </div>
-            <div class="column-wrapper">
               <li class="feature-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+              <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
               <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-            </div>
           </ul>
         </section>
 
@@ -185,10 +190,12 @@
           <section class="subscription">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
             <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+              <p class="subscription-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <div class="wrapper">
-                <label for="subscription-email-field">Электронная почта</label>
-                <input class="text-input-field" type="email" name="subscription-email" id="subscription-email-field">
+                <p class="text-input">
+                  <input class="text-input-field" type="email" name="subscription-email" id="subscription-email-field">
+                  <label class="text-input-label" for="subscription-email-field">Электронная почта</label>
+                </p> 
                 <button class="button" type="submit">Отправить</button>
               </div>
             </form>
@@ -198,13 +205,15 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img src="img/map.png" width="1200" height="430" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        <div class="contacts-wrapper">
-          <div class="contact-information">
-            <p>Адрес главного офиса и офлайн-магазина:<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-            <p>Для заказов по телефону:<a href="tel:+88124502525">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
+        <div class="map-wrapper">
+          <img src="img/map.png" width="1200" height="430" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+          <div class="contacts-wrapper">
+            <div class="contact-information">
+              <p>Адрес главного офиса и офлайн-магазина:<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+              <p>Для заказов по телефону:<a href="tel:+88124502525">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
+            </div>
+            <a class="button" href="#">Форма обратной связи</a>
           </div>
-          <a class="button" href="#">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -216,12 +225,16 @@
         <li><a class="social-button social-fb" href="#"><span class="visually-hidden">Facebook</span></a></li>
         <li><a class="social-button social-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
       </ul>
-      <ul class="footer-info">
-        <li><a href="#"><span class="underline-wrapper">Для поставщиков</span></a></li>
-        <li><a href="#"><span class="underline-wrapper">О производстве</span></a></li>
-        <li><a href="#"><span class="underline-wrapper">Наши документы</span></a></li>
-        <li><a href="#"><span class="underline-wrapper">Экологические стандарты</span></a></li>
-      </ul>
+      <div class="footer-info-wrapper">
+        <ul class="footer-info footer-links-part">
+          <li><a class="active" href="#"><span class="underline-wrapper">Для поставщиков</span></a></li>
+          <li><a href="#"><span class="underline-wrapper">О производстве</span></a></li>
+        </ul>
+        <ul class="footer-info footer-links-part">
+          <li><a href="#"><span class="underline-wrapper">Наши документы</span></a></li>
+          <li><a href="#"><span class="underline-wrapper">Экологические стандарты</span></a></li>
+        </ul>
+      </div>
       <div class="footer-copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg-gllacy/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML-академии"></a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"><span class="underline-wrapper">HTML Academy</span></a> © 2017</p>
@@ -232,19 +245,19 @@
       <h2 class="visually-hidden">Обратная связь</h2>
       <p>Мы обязательно вам ответим!</p>
       <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="feedback-name-field">Как вас зовут?</label>
+        <p class="text-input">
           <input class="text-input-field" type="text" name="feedback-name" id="feedback-name-field">
+          <label class="text-input-label" for="feedback-name-field">Как вас зовут?</label>          
         </p>
-        <p>
-          <label for="feedback-email-field">Ваша почта для ответа?</label>
+        <p class="text-input">
           <input class="text-input-field" type="email" name="feedback-email" id="feedback-email-field" required>
+          <label class="text-input-label" for="feedback-email-field">Ваша почта для ответа?</label>          
         </p>
-        <p>
-          <label class="visually-hidden" for="feedback-text-field">Ваш отзыв</label>
+        <p class="text-input">
           <textarea class="text-input-field" name="feedback-text" id="feedback-text-field" required>
-            Напишите что-нибудь...
+            
           </textarea>
+          <label class="text-input-label" for="feedback-text-field">Напишите что-нибудь...</label>
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>
