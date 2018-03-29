@@ -34,7 +34,7 @@
             </form>
           </li>
           <li class="user-navigation-login">
-            <a class="user-navigation user-navigation-link"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" fill="#fff"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" fill="#fff"/></svg>Вход</a>
+            <a class="user-navigation-link"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" fill="#fff"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" fill="#fff"/></svg>Вход</a>
             <section class="modal modal-login">
               <h2 class="visually-hidden">Пожалуйста, введите электронную почту и пароль или зарегистрируйтесь</h2>
               <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -62,26 +62,26 @@
               <h2 class="visually-hidden">Товары в корзине</h2>
               <table class="cart-items-list">
                 <tr>
-                  <td>
+                  <td class="cancel-button">
                     <button type="button"><span class="visually-hidden">Отмена</span></button>
                   </td>
-                  <td>
+                  <td class="item-image">
                     <img src="img/small-ice-cream-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                   </td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5 кг х <span>200 руб</span></td>
-                  <td>300 руб.</td>
+                  <td class="item-name">Пломбир с апельсиновым джемом</td>
+                  <td class="item-amount">1,5 кг х <span>200 руб</span></td>
+                  <td class="item-price">300 руб.</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td class="cancel-button">
                     <button type="button"><span class="visually-hidden">Отмена</span></button>
                   </td>
-                  <td>
+                  <td class="item-image">
                     <img src="img/small-ice-cream-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                   </td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>1,5 кг х <span>300 руб</span></td>
-                  <td>450 руб.</td>
+                  <td class="item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="item-amount">1,5 кг х <span>300 руб</span></td>
+                  <td class="item-price">450 руб.</td>
                 </tr>
                 <tr>
                   <td class="total" colspan="5">Итого:
@@ -128,9 +128,12 @@
         </div>
         <div class ="fieldset-wrapper">
           <fieldset>
-            <legend>Цена:</legend>
-            <label for="price-sorting-field">100 руб. – 500 руб.</label>
-            <input name="price-sorting" id="price-sorting-field" type="range" min="100" max="500" step="10">
+            <legend>Цена:100 руб. – 500 руб.</legend>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+            </div>
           </fieldset>
         </div>
         <div class ="fieldset-wrapper">
@@ -311,7 +314,7 @@
         </li>
       </ul>
       <div class="pagination">
-        <a class="pagination-link-arrow pagination-link-prev" href="#"><span class="visually-hidden">Назад</span></a>
+        <a class="pagination-link-arrow pagination-link-prev disabled" href="#"><span class="visually-hidden">Назад</span></a>
         <a href="#" class="pagination-link-current">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
