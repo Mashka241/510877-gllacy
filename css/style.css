@@ -144,8 +144,9 @@ a:focus {
   visibility: visible;
 }
 
-.modal-catalog-list {
+.main-navigation .modal-catalog-list {
   width: 143px;
+  padding: 3px 0;
   top: 26px;
   left: -5px;
   background-color: #ffffff;
@@ -187,13 +188,23 @@ a:focus {
 .modal-catalog-item:focus {
   background-color: #fbded7;
   margin-right: 0;
-  border-radius: 5px;
 }
 
 .modal-catalog-item:active {
   background-color: #f6b5a5;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.modal-catalog-list .active {  
+  background-color: #d07058;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-right: 0;
+}
+
+.modal-catalog-list .active a {
+  color: #ffffff;
 }
 
 .main-navigation ul {
@@ -287,12 +298,16 @@ a:focus {
   color: #323232;
 }
 
-.user-navigation .user-navigation-link:hover path,
+.user-navigation .user-navigation-link:not(.full-cart):hover path,
 .user-navigation .user-navigation-link:focus path,
-.user-navigation .user-navigation-link:hover circle,
+.user-navigation .user-navigation-link:not(.full-cart):hover circle,
 .user-navigation .user-navigation-link:focus circle {
   fill: #000000; 
 }
+
+/*.user-navigation .full-cart:hover path {
+  fill: ;
+}*/
 
 .user-navigation label {
   font-size: 14px;
@@ -842,7 +857,7 @@ a:focus {
 }
 
 .hit-catalog {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .catalog-page .catalog {
