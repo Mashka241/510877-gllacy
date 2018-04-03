@@ -192,13 +192,14 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="map-wrapper">
-          <img src="img/map.png" width="1200" height="430" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+          <!-- <iframe class="interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.320894615654417!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1522777950196" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+          <img class="map-image" src="img/map.png" width="1200" height="430" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           <div class="contacts-wrapper">
             <div class="contact-information">
               <p class="adress">Адрес главного офиса<br>и офлайн-магазина:<br><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
               <p class="phone">Для заказов по телефону:<br><a href="tel:+88124502525">8 812 450-25-25</a><br>(с 10 до 20 ежедневно)</p>
             </div>
-            <a class="button" href="#">Форма обратной связи</a>
+            <a class="button feedback-button" href="#">Форма обратной связи</a>
           </div>
         </div>
       </section>
@@ -234,7 +235,7 @@
           <label class="text-input-label visually-hidden" for="feedback-name-field">Как вас зовут?</label>          
         </p>
         <p class="text-input">
-          <input class="text-input-field" type="email" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа?" required>
+          <input class="text-input-field" type="email" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа?">
           <label class="text-input-label visually-hidden" for="feedback-email-field">Ваша почта для ответа?</label>          
         </p>
         <p class="text-input review">
@@ -246,5 +247,43 @@
       <button class="modal-close"><span class="visually-hidden">Закрыть окно с обратной связью</span></button>
     </section>
   </div>
+  <script>
+    var feedback = document.querySelector(".feedback-button");
+    var popup = document.querySelector(".modal-feedback");
+    var close = popup.querySelector(".modal-close");
+    var name = popup.querySelector("[name=feedback-name]");
+    var form = popup.querySelector("form");
+    var email = popup.querySelector("[name=feedback-email]");
+    var review = popup.querySelector("[name=feedback-text]");
+    feedback.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      // name.focus();
+    });
+
+    close.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    });
+
+    form.addEventListener("submit", function(evt) {
+      evt.preventDefault();
+      if (!name.value || !email.value || !review.value) {
+        evt.preventDefault();
+        popup.classList.add("modal-error");
+      } 
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+          popup.classList.remove("modal-show");
+          popup.classList.remove("modal-error");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
