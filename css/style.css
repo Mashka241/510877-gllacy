@@ -1195,6 +1195,10 @@ a:focus,a:hover {
     background-repeat: no-repeat
 }
 
+iframe {
+    border: none
+}
+
 .contacts-wrapper {
     position: absolute;
     right: 27px;
